@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alumnimanager.Controllers.ALUM_SIGNUP_FORMController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="376.0" prefWidth="600.0" stylesheets="@../text-effects.css">
+         <children>
+            <TextField fx:id="alumName" alignment="TOP_LEFT" layoutX="92.0" layoutY="62.0" prefHeight="26.0" prefWidth="350.0" promptText="Full name" stylesheets="@../text-effects.css" />
+            <TextField fx:id="gradYear" layoutX="92.0" layoutY="156.0" prefHeight="25.0" prefWidth="350.0" promptText="Form Graduation Year" stylesheets="@../text-effects.css" />
+            <TextField fx:id="gender" layoutX="92.0" layoutY="108.0" prefHeight="20.0" prefWidth="164.0" promptText="Gender (Male/Female)" stylesheets="@../text-effects.css" />
+            <TextField fx:id="birthdate" layoutX="278.0" layoutY="108.0" prefHeight="25.0" prefWidth="164.0" promptText="Date of Birth (DD/MM/YY))" stylesheets="@../text-effects.css" />
+            <TextField fx:id="country" layoutX="92.0" layoutY="202.0" prefHeight="25.0" prefWidth="350.0" promptText="Country of Residence" stylesheets="@../text-effects.css" />
+            <TextField fx:id="occupation" layoutX="92.0" layoutY="250.0" prefHeight="25.0" prefWidth="350.0" promptText="Occupation" stylesheets="@../text-effects.css" />
+            <TextField fx:id="email" layoutX="92.0" layoutY="300.0" prefHeight="25.0" prefWidth="350.0" promptText="E-mail address" stylesheets="@../text-effects.css" />
+            <ImageView fitHeight="68.0" fitWidth="81.0" layoutX="11.0" layoutY="8.0" preserveRatio="true">
+               <image>
+                  <Image url="@SOSHGIClogo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="saveButton" layoutX="486.0" layoutY="286.0" mnemonicParsing="false" onAction="#saveProfile" prefHeight="26.0" prefWidth="71.0" style="-fx-background-color: #1976d2;" text="SAVE" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Button fx:id="cancelButton" layoutX="486.0" layoutY="325.0" mnemonicParsing="false" onAction="#cancelProfile" prefHeight="26.0" prefWidth="71.0" style="-fx-background-color: #1976d2;" text="CANCEL" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
