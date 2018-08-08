@@ -7,12 +7,18 @@ import java.sql.Statement;
 
 public class Connect {
    Connection conn = null;
+   private static String path = "\\src\\alumnimanager\\database01.db";
+   
      private static Statement stmt = null;
-    
+     
+      private Connect(){}
+             
+      
        public static Connection ConnectDB(){
            try{
                Class.forName("org.sqlite.JDBC");
-               Connection conn = DriverManager.getConnection("jdbc:sqlite/AlumniManager/databaseAssistant/database01.db");
+               String url = "jdbc:sqlite:" + path;
+               Connection conn = DriverManager.getConnection(url);
                JOptionPane.showMessageDialog(null, "Connect");
                System.out.println("etienne");
                return conn;
@@ -36,7 +42,7 @@ public class Connect {
         finally {
         }
         return result;
-    }
+     }
 
     public boolean execAction(String qu) {
         try {
